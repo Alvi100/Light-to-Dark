@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <nav>
+       <div class="left">
+           <p>PORTFOLIO</p>
+       </div>
+       <div class="right">
+           <ul>
+              
+               <li><a href="">CONTACT</a></li>
+               <li><a href="">SERVICE</a></li>
+               <li><a href="" >ABOUT</a></li>
+               <li><a href="#" >HOME</a></li>
+            <li><img src=moon.png id="icon"></li>
+           </ul>
+         
+       </div>
+   </nav> 
+   
+   <div class="home">
+     <div class="text">
+   <p>Hello, I am <br>S.M. Hossain Mazba Alvi<br>
+   and I am a <span id="typing"></span></p>
+     <div class="cv">
+      <button>Download CV</button>
+      </div>
+     </div>
+   </div>
+   
+   <script type="text/javascript">
+   
+   var typed = new Typed('#typing', {
+   strings: ['Web Developer.', 'Programmer.', 'Youtuber.', 'Blogger.'],
+   typeSpeed: 80,
+   backSpeed: 60,
+   loop: true,
+   });
+   
+   </script>
+   
+   <script>
+       var icon = document.getElementById("icon");
+       
+       icon.onclick = function(){
+           document.body.classList.toggle("dark-theam");
+           if(document.body.classList.contains("dark-theam")){
+               icon.src = "sun.png";
+           }else{
+               icon.src = "moon.png";
+           }
+       }
+       
+   </script>
+   
+</body>
+</html>
